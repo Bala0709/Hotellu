@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends "hotellu_app/base_form.html" %}
+  {% block body_block %}
+    <!-- <h1>Relative page here</h1> -->
+
+
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hotellu App Another view</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href='g{% static "css/mystyle.css" %}' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+
+    <h1>Welcome to Hotellu app</h1>
+    <h2>Here we display the fake user names</h2>
+
+    {{ insert_me|cut:'inside' }}
+    {{ number|add:"19929" }}
+    {{ text }}
+
+    <!-- <div class="djangotwo">
+      {% if access_records %}
+      <table>
+        <thead>
+          <th> Site Name</th>
+          <th> Date Accessed</th>
+        </thead>
+
+
+      <!-- To fill out the row value here for each access record element -->
+
+      <!-- {% for acc in access_records %}
+      <tr>
+        <td>{{ acc.name }}</td>
+        <td>{{ acc.date }}</td>
+      </tr>
+      {% endfor %}
+      </table>
+
+      {% else %}
+        <p> NO ACCESS RECORD FOUND</p>
+
+      {% endif %} -->
+
+
+    </div>
+
+    </div>
+
+  </div>
+  </body>
+</html>
+{% endblock %}

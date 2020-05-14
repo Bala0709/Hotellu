@@ -1,0 +1,21 @@
+{% extends 'hotellu_app/base_form.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+  <h2>Please login</h2>
+  <form action="{% url 'hotellu_app:user_login' %}" method="POST">
+    {% csrf_token %}
+    <label for="username"> Uername:</label>
+    <input type="text" name="username" placeholder="Username here">
+
+    <label for="password"> Password:</label>
+    <input type="password" name="password" placeholder="Password here">
+
+    <input type="submit" name="" value="Login">
+
+  </form>
+
+</div>
+
+
+{% endblock %}

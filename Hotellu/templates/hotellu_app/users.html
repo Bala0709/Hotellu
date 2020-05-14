@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hotellu App Another view</title>
+    <link rel="stylesheet" href='{% static "css/mystyle.css" %}' />
+  </head>
+  <body>
+    <h1>Welcome to Hotellu app</h1>
+    <h2>Here we display all the fake list names</h2>
+
+    <div class="djangothree">
+      {% if names %}
+
+      <!-- To fill out the row value here for each access record element -->
+      <ol>
+
+        {% for name in names %}
+          <li>User Info</li>
+          <ul>
+            <li>FirstName: {{name.first_name}}</li>
+            <li>LastName: {{name.last_name}}</li>
+            <li>Email: {{name.email}}</li>
+          </ul>
+        {% endfor %}
+      </ol>
+
+      {% else %}
+        <p> NO ACCESS RECORD FOUND</p>
+
+      {% endif %}
+
+
+    </div>
+
+  </body>
+</html>
